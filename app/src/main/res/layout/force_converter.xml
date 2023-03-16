@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/appbackground"
+    >
+
+    <LinearLayout
+        android:id="@+id/ll_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#89F1E7"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="Force"
+            android:textStyle="bold"
+            android:textColor="#02030E"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/weight"
+            app:srcCompat="@drawable/weight" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/editTextLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="111dp"
+        android:layout_below="@id/ll_heading"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_heading">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_fromUnit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_rounded_input_field"
+                android:hint="From"
+                android:inputType="phone"
+                android:minHeight="48dp"
+                android:padding="12dp"
+                android:textColor="#090909"
+                android:textColorHint="#2745E8"
+                android:textCursorDrawable="@null"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_fromUnit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kilogram"
+                android:textAlignment="center"
+                android:textColor="#090909"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_toUnit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_rounded_input_field"
+                android:enabled="false"
+                android:hint="To"
+                android:inputType="none"
+                android:minHeight="48dp"
+                android:padding="12dp"
+                android:textColor="#090909"
+                android:textColorHint="#2745E8"
+                android:textCursorDrawable="@null"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_toUnit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ton"
+                android:textAlignment="center"
+                android:textColor="#090909"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="410dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="60dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLinearLayout">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#2D99A6"
+            android:layout_marginLeft="30dp"
+            android:padding="4dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_fromUnit"
+                android:layout_width="144dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tv2_fromUnit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select From"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="152dp"
+            android:layout_height="49dp"
+            android:background="#2D99A6"
+            android:layout_marginLeft="30dp"
+            android:padding="4dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_toUnit"
+                android:layout_width="143dp"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tv2_toUnit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select To"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLinearLayout"
+        >
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="125dp"
+            android:layout_marginTop="5dp"
+            android:text="Select Unit"
+            android:textColor="@color/black"
+            android:textStyle="italic"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="#0C7D8C"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/btn_convert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
+                android:text="Convert"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/btn_convert"
+                android:src="@drawable/converter" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
